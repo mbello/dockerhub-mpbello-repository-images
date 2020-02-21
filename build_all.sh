@@ -8,5 +8,12 @@ docker build --pull --no-cache --tag "${TAG_REPO}" https://github.com/mbello/doc
 docker push "${TAG_REPO}"
 docker image rm "${TAG_REPO}"
 
+TAG=python3.8-minimal-dev
+TAG_REPO=mpbello/"${TAG}":latest
+docker build --pull --no-cache --tag "${TAG_REPO}" https://github.com/mbello/dockerhub-mpbello-repository-images.git#:"${TAG}"
+docker push "${TAG_REPO}"
+docker image rm "${TAG_REPO}"
+
+
 
 docker image prune

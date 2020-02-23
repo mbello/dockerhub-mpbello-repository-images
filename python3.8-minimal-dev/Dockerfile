@@ -6,6 +6,6 @@ RUN set -xe \
     && apt-get install -y --no-install-recommends python3 python3-dev python3-pip curl git ssh-client \
     && apt-get --purge -y autoremove \
     && rm -rf /var/lib/apt/lists/* \
-    && pip --no-cache-dir install poetry
+    && pip3 --no-cache-dir install poetry
 
 CMD ["/usr/bin/python3", "--version"]

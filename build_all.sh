@@ -2,7 +2,7 @@
 
 set -xe
 
-./build_img.sh python3.8-minimal
-./build_img.sh python3.8-minimal-dev
+DIR="$(dirname $0)"
 
-# docker image prune
+"${DIR}"/build_img.sh python3.8-minimal
+"${DIR}"/build_img.sh python3.8-minimal-dev
